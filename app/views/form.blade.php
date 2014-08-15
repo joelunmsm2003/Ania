@@ -21,9 +21,6 @@
 	<input class="form" id="password" placeholder="Contraseña" type ="password" name ="password">
 	
 
-
-
-
 {{Form::button('Registrar',array('type'=>'submit','class'=>'btn')) }}
 
 {{ Form::close() }}

@@ -30,10 +30,15 @@ Route::get('/', function(){
 });
 
 
-Route::get('form_products', function(){
+
+
+//Route::get('form_products', function(){
  //render app/views/form.blade.php
- return View::make('form_products');
-});
+ //return View::make('form_products');
+//});
+
+
+
 Route::post('form-submit', array('before'=>'csrf',function(){
  //form validation come here
 }));
@@ -69,7 +74,8 @@ Route::controller('paquete','PaqueteController');
 Route::get('/fileform', function()
 {
 	
-	return View::make('fileform');
+	//return View::make('fileform');
+	return View::make('list_products');
 	
 });
 
@@ -83,5 +89,6 @@ Route::post('/fileform', function()
 
 	Input::file('myfile')->move($destinationPath,$name);
 
+    //return View::make('list_products');
 	
 });

@@ -22,7 +22,21 @@ class ProductsController extends \BaseController {
 	 */
 	public function create()
 	{
-		return View::make('form_products');
+
+        
+		$directory ="C:\Users\NEHO8\byteindie\public\assets\img"; 
+
+		$files = File::allFiles($directory);
+
+		//$extension = File::extension("C:\Users\NEHO8\byteindie\public\assets\img\google.png");
+		
+		//print_r($extension);
+
+		return View::make('form_products')->with('files',$files);
+
+		//return View::make('form_products');
+
+
 	}
 
 
@@ -97,7 +111,13 @@ class ProductsController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		
+       
+		$products = Products::find($id);
+		 $products->delete();
+
+	return Redirect::action('ProductsController@index');
+
 	}
 
 

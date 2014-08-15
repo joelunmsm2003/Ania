@@ -29,7 +29,7 @@ Lista de Productos
 
    <h2>Caracteristica</h2>
 
-      @foreach ($products as $user)
+@foreach ($products as $user)
 
   
        <li class="cli">{{$user->caracteristica}}</li>
@@ -58,6 +58,10 @@ Lista de Productos
         <p>{{$user->caracteristica}}</p>
        <p><a href="/products/{{$user->id}}/edit" class="btn btn-primary" role="button">Editar</a> 
        <a href="/products/{{$user->id}}" class="btn btn-default" role="button">Ver detalles</a></p>
+       {{Form::open(array('method'=>'delete','route'=>['products.destroy',$user->id]))}} 
+
+       <button type="submit">Delete</button>
+       {{Form::close()}}
   
        
       	
@@ -141,7 +145,5 @@ $(document).ready(function(){
 </script>
 
 
-
-$directorio=opendir($dir); 
 
 @stop

@@ -108,6 +108,7 @@ height: 33em;
 
 }
 
+
 #col_2{
 
 width: 75%;
@@ -115,6 +116,31 @@ background: #000;
 margin-top: 1em;
 height: 33em;
 
+
+}
+
+#col_1_cp,#col_2_cp{
+
+  vertical-align: middle;
+  display: inline-block;
+  
+}
+
+
+#col_1_cp{
+
+width: 40%;
+background: #aaa;
+margin-top: 1em;
+height: 33em;
+
+}
+#col_2_cp{
+
+width: 50%;
+background: #aac;
+margin-top: 1em;
+height: 33em;
 
 }
 
@@ -319,13 +345,14 @@ div#top-menu ul li a.selected {
 
 .form,.btn{
  
-  width: 20em;
-  height: 4.5em;
+  width: 12em;
+  height: 4em;
   background-color: #100;
   color: #fff;
     font-size: 15px;
   font-family: 'Dosis', serif;
   text-align: center;
+  margin: .2em;
 }
 
 
@@ -352,3 +379,15 @@ p.columnas {
    column-count: 3;
    width:500px;
 }
+
+
+
+.form, .form-img{
+
+    vertical-align: middle;
+  display: inline-block;
+  
+
+
+}
+
