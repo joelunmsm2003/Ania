@@ -24,7 +24,7 @@ class ProductsController extends \BaseController {
 	{
 
         
-		$directory ="C:\Users\NEHO8\byteindie\public\assets\img"; 
+		$directory ="/home/andiu/proyectos/shop-laravel/assets/"; 
 
 		$files = File::allFiles($directory);
 
